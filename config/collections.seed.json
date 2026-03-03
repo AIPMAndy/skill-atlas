@@ -1,0 +1,93 @@
+{
+  "collections": [
+    {
+      "id": "openai-official",
+      "name": "OpenAI Skills",
+      "repo": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "kind": "official",
+      "language": "en",
+      "local_candidates": [
+        "skills",
+        "openai-skills"
+      ],
+      "source_ids": [
+        "openai-curated",
+        "openai-system"
+      ],
+      "notes": "官方技能仓库，包含 .curated 与 .system。"
+    },
+    {
+      "id": "voltagent-openclaw",
+      "name": "Awesome OpenClaw Skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "kind": "community",
+      "language": "en",
+      "local_candidates": [
+        "awesome-openclaw-skills",
+        "voltagent-awesome-openclaw-skills"
+      ],
+      "source_ids": [
+        "voltagent-awesome"
+      ],
+      "notes": "英文社区聚合，覆盖面广，适合作为主样本池。"
+    },
+    {
+      "id": "aipmandy-cn",
+      "name": "Awesome OpenClaw Skills CN",
+      "repo": "AIPMAndy/awesome-openclaw-skills-CN",
+      "url": "https://github.com/AIPMAndy/awesome-openclaw-skills-CN",
+      "kind": "community",
+      "language": "zh-CN",
+      "local_candidates": [
+        "awesome-openclaw-skills-CN",
+        "aipmandy-awesome-openclaw-skills-cn"
+      ],
+      "source_ids": [
+        "aipmandy-cn"
+      ],
+      "notes": "中文社区聚合，偏中文可读性与本地化场景。"
+    },
+    {
+      "id": "sundial-awesome-openclaw",
+      "name": "Sundial Awesome OpenClaw Skills",
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "url": "https://github.com/sundial-org/awesome-openclaw-skills",
+      "kind": "community",
+      "language": "en",
+      "local_candidates": [
+        "awesome-openclaw-skills",
+        "sundial-awesome-openclaw-skills"
+      ],
+      "source_ids": [],
+      "notes": "社区整理版仓库，当前未接入本地索引。"
+    },
+    {
+      "id": "antigravity-awesome",
+      "name": "Antigravity Awesome Skills",
+      "repo": "sickn33/antigravity-awesome-skills",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills",
+      "kind": "community",
+      "language": "en",
+      "local_candidates": [
+        "antigravity-awesome-skills"
+      ],
+      "source_ids": [],
+      "notes": "第三方聚合仓库，当前未接入本地索引。"
+    },
+    {
+      "id": "voltagent-agent-skills",
+      "name": "Awesome Agent Skills",
+      "repo": "VoltAgent/awesome-agent-skills",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "kind": "community",
+      "language": "en",
+      "local_candidates": [
+        "awesome-agent-skills"
+      ],
+      "source_ids": [],
+      "notes": "更泛化的 Agent Skill 聚合，适合扩展跨框架来源。"
+    }
+  ]
+}

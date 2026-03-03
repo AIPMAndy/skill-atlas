@@ -1,0 +1,48 @@
+# Architecture
+
+## Pipeline
+
+1. Load source config from `config/sources.json`
+2. Fetch data from each source:
+   - `github_tree`: parse repository tree + optional frontmatter
+   - `markdown_links`: extract `SKILL.md` links from README-like pages
+3. Normalize into a common record schema
+4. Merge by `uid = <repo>:<path>`
+5. Write outputs:
+   - `data/skills.json`
+   - `data/skills.csv`
+   - `docs/latest.md`
+
+## Collection Organize Pipeline (Offline-first)
+
+1. (Optional) Bootstrap local repositories from seed config:
+   - script: `scripts/bootstrap_collections.py`
+   - output: `data/collections.bootstrap.json`
+2. Load collection seed from `config/collections.seed.json`
+3. Read local snapshot from `data/skills.json`
+4. Build collection-level stats:
+   - indexed count from `source_ids`
+   - optional local scan count from `--local-root`
+5. Mark collection status:
+   - `ready`: has indexed skills
+   - `ready-local`: no indexed skills but local scan found `SKILL.md`
+   - `blocked`: source linked but source has error
+   - `planned`: not indexed and no local scan results
+6. Write outputs:
+   - `data/collections.json`
+   - `docs/collections.md`
+
+## Fault Tolerance
+
+- Each source is isolated; one source failure does not break the full run.
+- `github_tree` sources can optionally use `fallback_listing_url` when API calls are rate-limited.
+- Errors are preserved into `sources[]` in `skills.json` for observability.
+- Collection organize flow does not require network and can continue with local snapshot only.
+
+## Automation
+
+GitHub Actions workflow (`.github/workflows/refresh-skills.yml`) supports:
+
+- manual trigger (`workflow_dispatch`)
+- external trigger (`repository_dispatch` with `event_type=refresh-skills`)
+- scheduled refresh (every 6 hours)

@@ -1,0 +1,46 @@
+name: Refresh Skills Index
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [refresh-skills]
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run aggregation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/refresh.sh
+
+      - name: Publish workflow summary
+        run: |
+          python3 scripts/print_stats.py --input data/skills.json --format markdown >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes detected"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git commit -m "chore: refresh skills index"
+          git push

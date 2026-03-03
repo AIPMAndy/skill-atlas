@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-03-03T03:19:42+00:00",
+  "seed": "config/collections.seed.json",
+  "skills_snapshot": "data/skills.json",
+  "local_root": "",
+  "total_collections": 6,
+  "collections": [
+    {
+      "id": "aipmandy-cn",
+      "name": "Awesome OpenClaw Skills CN",
+      "repo": "AIPMAndy/awesome-openclaw-skills-CN",
+      "url": "https://github.com/AIPMAndy/awesome-openclaw-skills-CN",
+      "kind": "community",
+      "language": "zh-CN",
+      "notes": "中文社区聚合，偏中文可读性与本地化场景。",
+      "source_ids": [
+        "aipmandy-cn"
+      ],
+      "source_status": [
+        {
+          "source_id": "aipmandy-cn",
+          "count": 2709,
+          "error": ""
+        }
+      ],
+      "status": "ready",
+      "indexed_skill_count": 2709,
+      "local_skill_count": 0,
+      "skill_count": 2709,
+      "sample_skills": [
+        "1",
+        "1password",
+        "2captcha",
+        "37soul-skill",
+        "4chan-reader",
+        "4claw",
+        "4todo",
+        "a-nach-b",
+        "a0x-agents",
+        "a2a-market",
+        "aap-passport",
+        "ab-test-setup",
+        "abm-outbound",
+        "academic-deep-research",
+        "accessibility-toolkit"
+      ],
+      "local_scan": {
+        "local_root": "",
+        "scanned_dirs": []
+      }
+    },
+    {
+      "id": "voltagent-openclaw",
+      "name": "Awesome OpenClaw Skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "kind": "community",
+      "language": "en",
+      "notes": "英文社区聚合，覆盖面广，适合作为主样本池。",
+      "source_ids": [
+        "voltagent-awesome"
+      ],
+      "source_status": [
+        {
+          "source_id": "voltagent-awesome",
+          "count": 845,
+          "error": ""
+        }
+      ],
+      "status": "ready",
+      "indexed_skill_count": 845,
+      "local_skill_count": 0,
+      "skill_count": 845,
+      "sample_skills": [
+        "0g-compute",
+        "0protocol",
+        "0x0-messenger",
+        "0xwork",
+        "1",
+        "12306",
+        "13-day-sprint-method",
+        "1p-shortlink",
+        "1password",
+        "1sec-security",
+        "2captcha",
+        "2nd-brain",
+        "2slides-skills",
+        "31third-safe-rebalancer-simple",
+        "37soul-skill"
+      ],
+      "local_scan": {
+        "local_root": "",
+        "scanned_dirs": []
+      }
+    },
+    {
+      "id": "openai-official",
+      "name": "OpenAI Skills",
+      "repo": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "kind": "official",
+      "language": "en",
+      "notes": "官方技能仓库，包含 .curated 与 .system。",
+      "source_ids": [
+        "openai-curated",
+        "openai-system"
+      ],
+      "source_status": [
+        {
+          "source_id": "openai-curated",
+          "count": 0,
+          "error": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing"
+        },
+        {
+          "source_id": "openai-system",
+          "count": 0,
+          "error": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing"
+        }
+      ],
+      "status": "blocked",
+      "indexed_skill_count": 0,
+      "local_skill_count": 0,
+      "skill_count": 0,
+      "sample_skills": [],
+      "local_scan": {
+        "local_root": "",
+        "scanned_dirs": []
+      }
+    },
+    {
+      "id": "sundial-awesome-openclaw",
+      "name": "Sundial Awesome OpenClaw Skills",
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "url": "https://github.com/sundial-org/awesome-openclaw-skills",
+      "kind": "community",
+      "language": "en",
+      "notes": "社区整理版仓库，当前未接入本地索引。",
+      "source_ids": [],
+      "source_status": [],
+      "status": "planned",
+      "indexed_skill_count": 0,
+      "local_skill_count": 0,
+      "skill_count": 0,
+      "sample_skills": [],
+      "local_scan": {
+        "local_root": "",
+        "scanned_dirs": []
+      }
+    },
+    {
+      "id": "antigravity-awesome",
+      "name": "Antigravity Awesome Skills",
+      "repo": "sickn33/antigravity-awesome-skills",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills",
+      "kind": "community",
+      "language": "en",
+      "notes": "第三方聚合仓库，当前未接入本地索引。",
+      "source_ids": [],
+      "source_status": [],
+      "status": "planned",
+      "indexed_skill_count": 0,
+      "local_skill_count": 0,
+      "skill_count": 0,
+      "sample_skills": [],
+      "local_scan": {
+        "local_root": "",
+        "scanned_dirs": []
+      }
+    },
+    {
+      "id": "voltagent-agent-skills",
+      "name": "Awesome Agent Skills",
+      "repo": "VoltAgent/awesome-agent-skills",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "kind": "community",
+      "language": "en",
+      "notes": "更泛化的 Agent Skill 聚合，适合扩展跨框架来源。",
+      "source_ids": [],
+      "source_status": [],
+      "status": "planned",
+      "indexed_skill_count": 0,
+      "local_skill_count": 0,
+      "skill_count": 0,
+      "sample_skills": [],
+      "local_scan": {
+        "local_root": "",
+        "scanned_dirs": []
+      }
+    }
+  ]
+}
