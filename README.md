@@ -1,153 +1,197 @@
-# SoSkill
+<div align="center">
 
-SoSkill 是开源的 Skill 搜索与聚合项目：支持手动/定时触发抓取最新 Skill，并自动聚合为统一索引。
+# 🔍 SoSkill
 
-## 项目目标
+**Skill 搜索与聚合引擎 | Skill Search & Aggregation Engine**
 
-- 聚合多生态 Skill（官方 + 社区）
-- 统一结构（名称、描述、来源、链接、路径）
-- 自动更新（GitHub Actions 定时 + 手动触发）
-- 产出可二次利用的数据文件（JSON/CSV/Markdown）
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/AIPMAndy/soskill?style=social)](https://github.com/AIPMAndy/soskill)
+[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://python.org)
 
-## 当前数据源
+[English](#english) | [简体中文](#中文)
 
-- `openai/skills`（`.curated` + `.system`）
-- `VoltAgent/awesome-openclaw-skills`（从 README 中提取 Skill 链接）
-- `AIPMAndy/awesome-openclaw-skills-CN`（从 README 中提取 Skill 链接）
+</div>
 
-数据源配置在 `config/sources.json`，可自由扩展。
+---
 
-## 快速开始
+<a name="english"></a>
+
+## 🎯 What is SoSkill?
+
+SoSkill is an open-source Skill search and aggregation engine that:
+
+- 🔄 **Auto-fetches** skills from multiple sources (official + community)
+- 📊 **Unifies** structure (name, description, source, link, path)
+- ⏰ **Auto-updates** via GitHub Actions (scheduled + manual trigger)
+- 📁 **Outputs** reusable data files (JSON/CSV/Markdown)
+
+## ✨ Current Data Sources
+
+| Source | Type |
+|--------|------|
+| `openai/skills` | Official (`.curated` + `.system`) |
+| `VoltAgent/awesome-openclaw-skills` | Community |
+| `AIPMAndy/awesome-openclaw-skills-CN` | Community (Chinese) |
+
+> Sources are configured in `config/sources.json` — easily extensible.
+
+## ⚡ Quick Start
 
 ```bash
-cd projects/soskill
+# Clone the repo
+git clone https://github.com/AIPMAndy/soskill.git
+cd soskill
+
+# Run fetch
 python3 scripts/fetch_skills.py
+
+# Or use make
+make refresh
 ```
 
-或使用封装脚本：
-
-```bash
-cd projects/soskill
-bash scripts/refresh.sh
-```
-
-常用参数：
-
-```bash
-python3 scripts/fetch_skills.py \
-  --config config/sources.json \
-  --output data/skills.json \
-  --csv data/skills.csv \
-  --markdown docs/latest.md
-```
-
-如需更高 API 额度（推荐）：
+For higher API rate limits:
 
 ```bash
 export GITHUB_TOKEN=<your_token>
-python3 scripts/fetch_skills.py
-```
-
-> 注：未配置 `GITHUB_TOKEN` 时，GitHub API 源（如 `openai/skills`）可能触发速率限制；脚本会自动降级并继续处理其他来源。
-
-## 常用命令
-
-```bash
-# 全量抓取
 make refresh
-
-# 快速抓取（本地调试）
-make refresh-fast
-
-# 查看统计摘要
-make stats
-
-# 不依赖在线抓取，直接整理开源集合
-make organize
-
-# 结合本地已克隆仓库做离线扫描整理
-make organize-local LOCAL_ROOT=/path/to/cloned/repos
-
-# 自动 clone/pull 集合仓库（先预演）
-make bootstrap-collections-dry
-
-# 自动 clone/pull 后直接产出离线整理报告
-make offline-local
 ```
 
-## 抓取失败时的直接整理模式
+## 📦 Output Files
 
-如果你当前环境抓取不稳定（比如 API 限流、网络波动），可以直接使用已维护的开源集合清单进行整理：
+| File | Description |
+|------|-------------|
+| `data/skills.json` | Full aggregated data |
+| `data/skills.csv` | For filtering & analysis |
+| `docs/latest.md` | Latest fetch summary |
+| `data/collections.json` | Structured collection data |
 
-- 清单配置：`config/collections.seed.json`
-- 本地拉取脚本：`scripts/bootstrap_collections.py`
-- 整理脚本：`scripts/organize_collections.py`
-- 产出结果：`data/collections.json` + `docs/collections.md`
-- 可选本地扫描：`--local-root`（扫描本地仓库里的 `SKILL.md`）
+## 🤝 Author
 
-运行方式：
+**Andy | AI Product Expert**
+
+- 🚀 Ex-Tencent / Ex-Baidu AI Product Lead
+- 🦄 LLM Unicorn VP → Startup CEO
+
+**WeChat:** AIPMAndy | **GitHub:** [@AIPMAndy](https://github.com/AIPMAndy)
+
+---
+
+<a name="中文"></a>
+
+## 🎯 SoSkill 是什么？
+
+SoSkill 是一个开源的 Skill 搜索与聚合引擎：
+
+- 🔄 **自动抓取** 多来源 Skill（官方 + 社区）
+- 📊 **统一结构**（名称、描述、来源、链接、路径）
+- ⏰ **自动更新**（GitHub Actions 定时 + 手动触发）
+- 📁 **输出文件**（JSON/CSV/Markdown）
+
+## ✨ 当前数据源
+
+| 来源 | 类型 |
+|------|------|
+| `openai/skills` | 官方（`.curated` + `.system`） |
+| `VoltAgent/awesome-openclaw-skills` | 社区 |
+| `AIPMAndy/awesome-openclaw-skills-CN` | 社区（中文） |
+
+> 数据源配置在 `config/sources.json`，可自由扩展。
+
+## ⚡ 快速开始
 
 ```bash
-cd projects/soskill
-make organize
+# 克隆仓库
+git clone https://github.com/AIPMAndy/soskill.git
+cd soskill
 
-# 如果你已 clone 多个开源集合仓库
-make organize-local LOCAL_ROOT=/Users/andy/projects
+# 运行抓取
+python3 scripts/fetch_skills.py
 
-# 先自动拉取/更新开源集合，再离线整理
-make offline-local
+# 或使用 make
+make refresh
 ```
 
-默认 `make organize` 不访问网络，只会基于当前本地 `data/skills.json` 进行集合归类。
-如果传入 `--local-root`，会额外扫描本地仓库目录中的 `SKILL.md`，把未接入索引的集合也先纳入整理报告。
-`make offline-local` 会先执行 bootstrap（clone/pull），再执行 organize-local，形成闭环。
+需要更高 API 额度时：
 
-## 自动触发抓取
+```bash
+export GITHUB_TOKEN=<your_token>
+make refresh
+```
+
+## 🛠️ 常用命令
+
+```bash
+make refresh          # 全量抓取
+make refresh-fast     # 快速抓取（本地调试）
+make stats            # 查看统计摘要
+make organize         # 整理开源集合（离线）
+make offline-local    # 自动拉取 + 离线整理
+```
+
+## 📦 输出文件
+
+| 文件 | 说明 |
+|------|------|
+| `data/skills.json` | 完整聚合数据 |
+| `data/skills.csv` | 便于筛选分析 |
+| `docs/latest.md` | 最新抓取摘要 |
+| `data/collections.json` | 结构化集合数据 |
+
+## 🔄 自动更新
 
 工作流文件：`.github/workflows/refresh-skills.yml`
 
-- `workflow_dispatch`：手动触发
-- `repository_dispatch`（`refresh-skills`）：外部触发
-- `schedule`：每 6 小时自动抓取
+- **手动触发**：`workflow_dispatch`
+- **外部触发**：`repository_dispatch`（`refresh-skills`）
+- **定时触发**：每 6 小时自动抓取
 
-抓取后会自动提交更新到仓库（仅当数据有变化时）。
+## 📁 项目结构
 
-### 外部触发示例（跨仓库/Webhook）
-
-```bash
-curl -X POST \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer <PAT_WITH_REPO_SCOPE>" \
-  https://api.github.com/repos/<owner>/soskill/dispatches \
-  -d '{"event_type":"refresh-skills"}'
+```
+soskill/
+├── config/
+│   ├── sources.json         # 数据源配置
+│   └── collections.seed.json # 集合清单
+├── scripts/
+│   ├── fetch_skills.py       # 抓取脚本
+│   ├── organize_collections.py
+│   └── bootstrap_collections.py
+├── data/
+│   ├── skills.json           # 聚合数据
+│   └── skills.csv
+├── docs/
+│   ├── latest.md             # 最新摘要
+│   └── ARCHITECTURE.md       # 架构说明
+└── .github/workflows/
+    └── refresh-skills.yml    # 自动化工作流
 ```
 
-## 输出文件
+## 🤝 贡献
 
-- `data/skills.json`：完整聚合数据
-- `data/skills.csv`：便于筛选分析
-- `docs/latest.md`：最新抓取摘要
-- `data/collections.json`：开源集合清单的结构化整理结果
-- `docs/collections.md`：开源集合整理报告
-- `data/collections.bootstrap.json`：本地集合仓库 bootstrap 执行清单
+欢迎提交：
+- 新数据源、解析器
+- 质量审计和风险标签规则
+- Bug 修复和功能改进
 
-架构说明见：`docs/ARCHITECTURE.md`
+建议先提 Issue 再提 PR。
 
-## 数据结构（skills.json）
+## 作者
 
-核心字段：
+**AI酋长Andy** | 前腾讯/百度 AI 产品专家
 
-- `generated_at`：生成时间（UTC）
-- `total`：去重后 Skill 数量
-- `sources[]`：每个来源抓取统计与错误信息
-- `skills[]`：每条 Skill 的统一结构（`name`、`description`、`repo`、`path`、`html_url` 等）
+- 🚀 大模型独角兽 VP → 创业 CEO
+- 🎯 AI 商业战略顾问
 
-## 开源协作
+**微信:** AIPMAndy | **GitHub:** [@AIPMAndy](https://github.com/AIPMAndy)
 
-- 欢迎提交新数据源、解析器和评分逻辑
-- 欢迎提交质量审计和风险标签规则
-- 先提 Issue 再提 PR 会更高效
+---
 
-## 许可证
+## 📄 许可证 / License
 
-MIT
+[Apache-2.0](LICENSE)
+
+---
+
+<p align="center">
+  ⭐ If this helps, please give it a star! / 觉得有用请点个 Star！
+</p>
