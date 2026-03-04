@@ -42,7 +42,7 @@ def main() -> None:
     top_repos = repo_counter.most_common(args.top)
 
     if args.format == "markdown":
-        print("## Skill Atlas Summary")
+        print("## SoSkill Summary")
         print("")
         print(f"- Generated at: `{payload.get('generated_at', '')}`")
         print(f"- Total unique skills: `{payload.get('total', 0)}`")
@@ -68,4 +68,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

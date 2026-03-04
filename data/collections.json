@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T03:19:42+00:00",
+  "generated_at": "2026-03-04T14:57:45+00:00",
   "seed": "config/collections.seed.json",
   "skills_snapshot": "data/skills.json",
   "local_root": "",
@@ -108,20 +108,36 @@
       "source_status": [
         {
           "source_id": "openai-curated",
-          "count": 0,
-          "error": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing"
+          "count": 31,
+          "error": ""
         },
         {
           "source_id": "openai-system",
-          "count": 0,
-          "error": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing"
+          "count": 2,
+          "error": ""
         }
       ],
-      "status": "blocked",
-      "indexed_skill_count": 0,
+      "status": "ready",
+      "indexed_skill_count": 33,
       "local_skill_count": 0,
-      "skill_count": 0,
-      "sample_skills": [],
+      "skill_count": 33,
+      "sample_skills": [
+        "chatgpt-apps",
+        "cloudflare-deploy",
+        "develop-web-game",
+        "doc",
+        "figma",
+        "figma-implement-design",
+        "gh-address-comments",
+        "gh-fix-ci",
+        "imagegen",
+        "jupyter-notebook",
+        "linear",
+        "netlify-deploy",
+        "notion-knowledge-capture",
+        "notion-meeting-intelligence",
+        "notion-research-documentation"
+      ],
       "local_scan": {
         "local_root": "",
         "scanned_dirs": []

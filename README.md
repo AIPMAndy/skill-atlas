@@ -1,6 +1,6 @@
-# Skill Atlas
+# SoSkill
 
-开源的 Skill 聚合项目：支持手动/定时触发抓取最新 Skill，并自动聚合为统一索引。
+SoSkill 是开源的 Skill 搜索与聚合项目：支持手动/定时触发抓取最新 Skill，并自动聚合为统一索引。
 
 ## 项目目标
 
@@ -20,14 +20,14 @@
 ## 快速开始
 
 ```bash
-cd projects/skill-atlas
+cd projects/soskill
 python3 scripts/fetch_skills.py
 ```
 
 或使用封装脚本：
 
 ```bash
-cd projects/skill-atlas
+cd projects/soskill
 bash scripts/refresh.sh
 ```
 
@@ -88,7 +88,7 @@ make offline-local
 运行方式：
 
 ```bash
-cd projects/skill-atlas
+cd projects/soskill
 make organize
 
 # 如果你已 clone 多个开源集合仓库
@@ -118,7 +118,7 @@ make offline-local
 curl -X POST \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer <PAT_WITH_REPO_SCOPE>" \
-  https://api.github.com/repos/<owner>/skill-atlas/dispatches \
+  https://api.github.com/repos/<owner>/soskill/dispatches \
   -d '{"event_type":"refresh-skills"}'
 ```
 

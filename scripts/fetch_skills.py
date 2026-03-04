@@ -35,7 +35,7 @@ class GitHubClient:
     def _request(self, url: str, accept: str) -> bytes:
         headers = {
             "Accept": accept,
-            "User-Agent": "skill-atlas-bot/1.0",
+            "User-Agent": "soskill-bot/1.0",
         }
         if self.token:
             headers["Authorization"] = f"Bearer {self.token}"
@@ -373,7 +373,7 @@ def write_csv(path: Path, records: List[SkillRecord]) -> None:
 def write_markdown(path: Path, generated_at: str, stats: List[Dict[str, Any]], records: List[SkillRecord]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     lines: List[str] = []
-    lines.append("# Skill Atlas Snapshot")
+    lines.append("# SoSkill Snapshot")
     lines.append("")
     lines.append(f"- Generated at: `{generated_at}`")
     lines.append(f"- Total unique skills: `{len(records)}`")

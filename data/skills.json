@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-03-03T02:32:24+00:00",
-  "total": 3092,
+  "generated_at": "2026-03-04T14:57:45+00:00",
+  "total": 3125,
   "sources": [
     {
       "source_id": "openai-curated",
       "type": "github_tree",
-      "count": 0,
-      "error": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing"
+      "repo": "openai/skills",
+      "branch": "main",
+      "count": 31,
+      "truncated": false,
+      "frontmatter_enriched": 31,
+      "fallback": "html_listing",
+      "warning": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec"
     },
     {
       "source_id": "openai-system",
       "type": "github_tree",
-      "count": 0,
-      "error": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing"
+      "repo": "openai/skills",
+      "branch": "main",
+      "count": 2,
+      "truncated": false,
+      "frontmatter_enriched": 2,
+      "fallback": "html_listing",
+      "warning": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec"
     },
     {
       "source_id": "voltagent-awesome",
@@ -10445,6 +10455,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/chatgpt-apps/SKILL.md",
+      "name": "chatgpt-apps",
+      "description": "Build, scaffold, refactor, and troubleshoot ChatGPT Apps SDK applications that combine an MCP server and widget UI. Use when Codex needs to design tools, register UI resources, wire the MCP Apps bridge or ChatGPT compatibility APIs, apply Apps SDK metadata or CSP or domain settings, or produce a docs-aligned project scaffold. Prefer a docs-first workflow by invoking the openai-docs skill or OpenAI developer docs MCP tools before generating code.",
+      "slug": "chatgpt-apps",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/chatgpt-apps/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/chatgpt-apps/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/chatgpt-apps/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/hollaugo/chatgpt-apps/SKILL.md",
       "name": "chatgpt-apps",
       "description": "",
@@ -12726,6 +12750,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/stopmoclay/cloudflare-api/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/cloudflare-deploy/SKILL.md",
+      "name": "cloudflare-deploy",
+      "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+      "slug": "cloudflare-deploy",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/cloudflare-deploy/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/cloudflare-deploy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/cloudflare-deploy/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -15385,6 +15423,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/develop-web-game/SKILL.md",
+      "name": "develop-web-game",
+      "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
+      "slug": "develop-web-game",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/develop-web-game/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/develop-web-game/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/develop-web-game/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/jgm2025/devialet/SKILL.md",
       "name": "devialet",
       "description": "",
@@ -15723,6 +15775,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/gitgoodordietrying/dns-networking/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/doc/SKILL.md",
+      "name": "doc",
+      "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+      "slug": "doc",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/doc/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/doc/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/doc/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -18074,6 +18140,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/figma/SKILL.md",
+      "name": "figma",
+      "description": "Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.",
+      "slug": "figma",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/maddiedreese/figma/SKILL.md",
       "name": "figma",
       "description": "",
@@ -18085,6 +18165,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/maddiedreese/figma/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/figma-implement-design/SKILL.md",
+      "name": "figma-implement-design",
+      "description": "Translate Figma nodes into production-ready code with 1:1 visual fidelity using the Figma MCP workflow (design context, screenshots, assets, and project-convention translation). Trigger when the user provides Figma URLs or node IDs, or asks to implement designs or components that must match Figma specs. Requires a working Figma MCP server connection.",
+      "slug": "figma-implement-design",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-implement-design/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-implement-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-implement-design/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -19538,6 +19632,34 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/amascia-gg/ggshield-scanner/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/gh-address-comments/SKILL.md",
+      "name": "gh-address-comments",
+      "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.",
+      "slug": "gh-address-comments",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/gh-address-comments/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/gh-address-comments/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/gh-address-comments/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/gh-fix-ci/SKILL.md",
+      "name": "gh-fix-ci",
+      "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+      "slug": "gh-fix-ci",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/gh-fix-ci/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/gh-fix-ci/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/gh-fix-ci/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -21732,6 +21854,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/imagegen/SKILL.md",
+      "name": "imagegen",
+      "description": "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.",
+      "slug": "imagegen",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/imagegen/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/imagegen/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/imagegen/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/kesslerio/imagemagick/SKILL.md",
       "name": "imagemagick",
       "description": "",
@@ -22748,6 +22884,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/jupyter-notebook/SKILL.md",
+      "name": "jupyter-notebook",
+      "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+      "slug": "jupyter-notebook",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/jupyter-notebook/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/jupyter-notebook/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/jupyter-notebook/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/chipagosfinest/just-fucking-cancel/SKILL.md",
       "name": "just-fucking-cancel",
       "description": "",
@@ -23702,6 +23852,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/luruibu/liminal/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/linear/SKILL.md",
+      "name": "linear",
+      "description": "Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.",
+      "slug": "linear",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/linear/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/linear/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/linear/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -27552,6 +27716,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/netlify-deploy/SKILL.md",
+      "name": "netlify-deploy",
+      "description": "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.",
+      "slug": "netlify-deploy",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/netlify-deploy/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/netlify-deploy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/netlify-deploy/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/mrlynn/netpad/SKILL.md",
       "name": "netpad",
       "description": "",
@@ -28254,6 +28432,62 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/notion-knowledge-capture/SKILL.md",
+      "name": "notion-knowledge-capture",
+      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "slug": "notion-knowledge-capture",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/notion-knowledge-capture/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-knowledge-capture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/notion-knowledge-capture/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/notion-meeting-intelligence/SKILL.md",
+      "name": "notion-meeting-intelligence",
+      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "slug": "notion-meeting-intelligence",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/notion-meeting-intelligence/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-meeting-intelligence/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/notion-meeting-intelligence/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/notion-research-documentation/SKILL.md",
+      "name": "notion-research-documentation",
+      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "slug": "notion-research-documentation",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/notion-research-documentation/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-research-documentation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/notion-research-documentation/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/notion-spec-to-implementation/SKILL.md",
+      "name": "notion-spec-to-implementation",
+      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "slug": "notion-spec-to-implementation",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/notion-spec-to-implementation/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-spec-to-implementation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/notion-spec-to-implementation/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/k4ditano/notnative/SKILL.md",
       "name": "notnative",
       "description": "",
@@ -28910,6 +29144,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/bderiel/open-ralph/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/openai-docs/SKILL.md",
+      "name": "openai-docs",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.",
+      "slug": "openai-docs",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/openai-docs/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/openai-docs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/openai-docs/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -30206,6 +30454,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/pdf/SKILL.md",
+      "name": "pdf",
+      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+      "slug": "pdf",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/pdf/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/pdf/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/pdf/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/awspace/pdf/SKILL.md",
       "name": "pdf",
       "description": "",
@@ -30961,6 +31223,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/frodo-temaki/playground/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/playwright/SKILL.md",
+      "name": "playwright",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "slug": "playwright",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/playwright/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/playwright/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -33766,6 +34042,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/render-deploy/SKILL.md",
+      "name": "render-deploy",
+      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "slug": "render-deploy",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/render-deploy/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/render-deploy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/render-deploy/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/ajmwagar/render-stl-png/SKILL.md",
       "name": "render-stl-png",
       "description": "",
@@ -34607,6 +34897,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/screenshot/SKILL.md",
+      "name": "screenshot",
+      "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+      "slug": "screenshot",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/screenshot/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/screenshot/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/screenshot/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/snail3d/scripture-curated/SKILL.md",
       "name": "scripture-curated",
       "description": "",
@@ -34803,6 +35107,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/security-best-practices/SKILL.md",
+      "name": "security-best-practices",
+      "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
+      "slug": "security-best-practices",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/security-best-practices/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/security-best-practices/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/security-best-practices/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/wolffan/security-check-skill/SKILL.md",
       "name": "security-check-skill",
       "description": "",
@@ -34845,6 +35163,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/security-ownership-map/SKILL.md",
+      "name": "security-ownership-map",
+      "description": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions.",
+      "slug": "security-ownership-map",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/security-ownership-map/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/security-ownership-map/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/security-ownership-map/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/autogame-17/security-sentinel/SKILL.md",
       "name": "security-sentinel",
       "description": "",
@@ -34856,6 +35188,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/autogame-17/security-sentinel/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/security-threat-model/SKILL.md",
+      "name": "security-threat-model",
+      "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.",
+      "slug": "security-threat-model",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/security-threat-model/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/security-threat-model/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/security-threat-model/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -35248,6 +35594,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/omere2/sensibo/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/sentry/SKILL.md",
+      "name": "sentry",
+      "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`.",
+      "slug": "sentry",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/sentry/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/sentry/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/sentry/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -35939,6 +36299,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.system/skill-creator/SKILL.md",
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "slug": "skill-creator",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.system/skill-creator/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.system/skill-creator/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.system/skill-creator/SKILL.md",
+      "source_ids": [
+        "openai-system"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/chindden/skill-creator/SKILL.md",
       "name": "skill-creator",
       "description": "",
@@ -36090,6 +36464,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/santyr/skill-hexmem/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.system/skill-installer/SKILL.md",
+      "name": "skill-installer",
+      "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+      "slug": "skill-installer",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.system/skill-installer/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.system/skill-installer/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.system/skill-installer/SKILL.md",
+      "source_ids": [
+        "openai-system"
       ]
     },
     {
@@ -36892,6 +37280,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/sora/SKILL.md",
+      "name": "sora",
+      "description": "Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI\\u2019s video API using the bundled CLI (`scripts/sora.py`), including requests like \\u201cgenerate AI video,\\u201d \\u201cSora,\\u201d \\u201cvideo remix,\\u201d \\u201cdownload video/thumbnail/spritesheet,\\u201d and batch video generation; requires `OPENAI_API_KEY` and Sora API access.",
+      "slug": "sora",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/sora/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/sora/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/sora/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/pauldelavallaz/sora-video-gen/SKILL.md",
       "name": "sora-video-gen",
       "description": "",
@@ -37060,6 +37462,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/speech/SKILL.md",
+      "name": "speech",
+      "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope.",
+      "slug": "speech",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/speech/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/speech/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/speech/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/spsneo/speedtest/SKILL.md",
       "name": "speedtest",
       "description": "",
@@ -37211,6 +37627,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/foeken/spots/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/spreadsheet/SKILL.md",
+      "name": "spreadsheet",
+      "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.",
+      "slug": "spreadsheet",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/spreadsheet/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/spreadsheet/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/spreadsheet/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -39815,6 +40245,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/transcribe/SKILL.md",
+      "name": "transcribe",
+      "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+      "slug": "transcribe",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/transcribe/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/transcribe/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/transcribe/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/javicasper/transcribe/SKILL.md",
       "name": "transcribe",
       "description": "",
@@ -41157,6 +41601,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/thesethrose/vercel/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/vercel-deploy/SKILL.md",
+      "name": "vercel-deploy",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "slug": "vercel-deploy",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/vercel-deploy/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/vercel-deploy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/vercel-deploy/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -43159,6 +43617,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/edwardirby/ydc-openai-agent-sdk-integration/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/yeet/SKILL.md",
+      "name": "yeet",
+      "description": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`).",
+      "slug": "yeet",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/yeet/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/yeet/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/yeet/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {

@@ -1,14 +1,14 @@
-# Skill Atlas Snapshot
+# SoSkill Snapshot
 
-- Generated at: `2026-03-03T02:32:24+00:00`
-- Total unique skills: `3092`
+- Generated at: `2026-03-04T14:57:45+00:00`
+- Total unique skills: `3125`
 
 ## Source Coverage
 
 | Source | Type | Count | Notes |
 |---|---:|---:|---|
-| openai-curated | github_tree | 0 | error=HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {"message":"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing |
-| openai-system | github_tree | 0 | error=HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {"message":"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec; fallback_failed=No SKILL paths found from fallback listing |
+| openai-curated | github_tree | 31 | openai/skills; fallback=html_listing; frontmatter=31 |
+| openai-system | github_tree | 2 | openai/skills; fallback=html_listing; frontmatter=2 |
 | voltagent-awesome | markdown_links | 845 |  |
 | aipmandy-cn | markdown_links | 2709 |  |
 
