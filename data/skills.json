@@ -1,17 +1,15 @@
 {
-  "generated_at": "2026-03-04T14:57:45+00:00",
-  "total": 3125,
+  "generated_at": "2026-03-04T19:06:43+00:00",
+  "total": 3127,
   "sources": [
     {
       "source_id": "openai-curated",
       "type": "github_tree",
       "repo": "openai/skills",
       "branch": "main",
-      "count": 31,
+      "count": 33,
       "truncated": false,
-      "frontmatter_enriched": 31,
-      "fallback": "html_listing",
-      "warning": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec"
+      "frontmatter_enriched": 33
     },
     {
       "source_id": "openai-system",
@@ -20,9 +18,7 @@
       "branch": "main",
       "count": 2,
       "truncated": false,
-      "frontmatter_enriched": 2,
-      "fallback": "html_listing",
-      "warning": "HTTP 403 for https://api.github.com/repos/openai/skills/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 140.235.141.210. (But here's the good news: Authenticated requests get a higher rate limit. Chec"
+      "frontmatter_enriched": 2
     },
     {
       "source_id": "voltagent-awesome",
@@ -6604,6 +6600,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/kj5irq/asl-control/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/aspnet-core/SKILL.md",
+      "name": "aspnet-core",
+      "description": "Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, controller-based Web APIs, SignalR, gRPC, middleware, dependency injection, configuration, authentication, authorization, testing, performance, deployment, or ASP.NET Core upgrades.",
+      "slug": "aspnet-core",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/aspnet-core/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/aspnet-core/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/aspnet-core/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
@@ -42931,6 +42941,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/spliff7777/windows-control/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/winui-app/SKILL.md",
+      "name": "winui-app",
+      "description": "Bootstrap, develop, and design modern WinUI 3 desktop applications with C# and the Windows App SDK using official Microsoft guidance, WinUI Gallery patterns, Windows App SDK samples, and CommunityToolkit components. Use when creating a brand new app, preparing a machine for WinUI, reviewing, refactoring, planning, troubleshooting, environment-checking, or setting up WinUI 3 XAML, controls, navigation, windowing, theming, accessibility, responsiveness, performance, deployment, or related Windows app design and development work.",
+      "slug": "winui-app",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/winui-app/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/winui-app/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/winui-app/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
