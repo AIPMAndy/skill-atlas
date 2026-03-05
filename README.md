@@ -56,6 +56,18 @@ export GITHUB_TOKEN=<your_token>
 make refresh
 ```
 
+## 🧩 Install as a Codex Skill
+
+This repository now includes an installable Codex Skill package at `skills/public/soskill`.
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo AIPMAndy/soskill \
+  --path skills/public/soskill
+```
+
+After installation, restart Codex to pick up the new skill.
+
 ## 📦 Output Files
 
 | File | Description |
@@ -118,6 +130,18 @@ export GITHUB_TOKEN=<your_token>
 make refresh
 ```
 
+## 🧩 作为 Codex Skill 一键安装
+
+仓库内已内置可安装的 Skill 包：`skills/public/soskill`。
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo AIPMAndy/soskill \
+  --path skills/public/soskill
+```
+
+安装后重启 Codex 即可识别新 Skill。
+
 ## 🛠️ 常用命令
 
 ```bash
@@ -149,6 +173,7 @@ make offline-local    # 自动拉取 + 离线整理
 
 ```
 soskill/
+├── skills/public/soskill/    # 可直接安装的 Codex Skill 包
 ├── config/
 │   ├── sources.json         # 数据源配置
 │   └── collections.seed.json # 集合清单

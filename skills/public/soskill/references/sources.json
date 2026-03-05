@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "id": "openai-curated",
+      "type": "github_tree",
+      "repo": "openai/skills",
+      "branch": "main",
+      "fallback_listing_url": "https://github.com/openai/skills/tree/main/skills/.curated",
+      "include_prefixes": [
+        "skills/.curated/"
+      ],
+      "frontmatter": true,
+      "frontmatter_limit": 400
+    },
+    {
+      "id": "openai-system",
+      "type": "github_tree",
+      "repo": "openai/skills",
+      "branch": "main",
+      "fallback_listing_url": "https://github.com/openai/skills/tree/main/skills/.system",
+      "include_prefixes": [
+        "skills/.system/"
+      ],
+      "frontmatter": true,
+      "frontmatter_limit": 100
+    },
+    {
+      "id": "voltagent-awesome",
+      "type": "markdown_links",
+      "readme_url": "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md",
+      "frontmatter": false
+    },
+    {
+      "id": "aipmandy-cn",
+      "type": "markdown_links",
+      "readme_url": "https://raw.githubusercontent.com/AIPMAndy/awesome-openclaw-skills-CN/main/README.md",
+      "frontmatter": false
+    }
+  ]
+}

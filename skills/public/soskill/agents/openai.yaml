@@ -1,0 +1,4 @@
+interface:
+  display_name: "SoSkill"
+  short_description: "Aggregate and analyze Codex skill ecosystems"
+  default_prompt: "Refresh and analyze multi-source Codex skill indexes using SoSkill scripts."
