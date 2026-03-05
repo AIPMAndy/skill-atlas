@@ -13,6 +13,20 @@
    - `data/skills.csv`
    - `docs/latest.md`
 
+## Workflow Orchestrator
+
+- Script: `scripts/run_workflow.py`
+- Modes:
+  - `refresh`: fetch + stats
+  - `secure-refresh`: fetch + stats + audit
+  - `full`: fetch + stats + audit + collection organize
+  - `offline`: bootstrap collections + local organize (requires existing skills snapshot)
+- Key options:
+  - `--skills-input <path>`: use existing `skills.json` for offline/organize stage
+  - `--bootstrap-dry-run`: preview clone/pull actions in offline mode
+  - `--top <N>`: control top repositories in stats output
+- Goal: reduce multi-step command chains into one deterministic entry point.
+
 ## Collection Organize Pipeline (Offline-first)
 
 1. (Optional) Bootstrap local repositories from seed config:

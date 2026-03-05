@@ -53,11 +53,8 @@ SoSkill is an open-source Skill search and aggregation engine that:
 git clone https://github.com/AIPMAndy/soskill.git
 cd soskill
 
-# Run fetch
-python3 scripts/fetch_skills.py
-
-# Or use make
-make refresh
+# One command (recommended): fetch + stats + security audit
+python3 scripts/run_workflow.py --mode secure-refresh --out-dir data
 ```
 
 For higher API rate limits:
@@ -145,6 +142,25 @@ make audit
 make audit-deep
 ```
 
+## 🧭 One-command Workflow Modes
+
+```bash
+# fetch + stats
+python3 scripts/run_workflow.py --mode refresh --out-dir data
+
+# fetch + stats + audit (recommended)
+python3 scripts/run_workflow.py --mode secure-refresh --out-dir data
+
+# fetch + stats + audit + organize
+python3 scripts/run_workflow.py --mode full --out-dir data
+
+# bootstrap collections + local organize (requires existing skills snapshot)
+python3 scripts/run_workflow.py --mode offline --out-dir data --skills-input data/skills.json
+
+# preview offline actions without cloning/pulling
+python3 scripts/run_workflow.py --mode offline --out-dir data --skills-input data/skills.json --bootstrap-dry-run --dry-run
+```
+
 ## 🤝 Author
 
 **Andy | AI Product Expert**
@@ -194,11 +210,8 @@ SoSkill 是一个开源的 Skill 搜索与聚合引擎：
 git clone https://github.com/AIPMAndy/soskill.git
 cd soskill
 
-# 运行抓取
-python3 scripts/fetch_skills.py
-
-# 或使用 make
-make refresh
+# 一条命令（推荐）：抓取 + 统计 + 安全审核
+python3 scripts/run_workflow.py --mode secure-refresh --out-dir data
 ```
 
 需要更高 API 额度时：
@@ -230,6 +243,10 @@ make organize         # 整理开源集合（离线）
 make offline-local    # 自动拉取 + 离线整理
 make audit            # Skill 风险审核（离线元数据）
 make audit-deep       # Skill 深度审核（联网拉取 SKILL.md）
+make workflow         # 一键安全流程（抓取+统计+审核）
+make workflow-full    # 一键全流程（抓取+统计+审核+整理）
+make workflow-offline # 一键离线流程（拉取集合+本地整理）
+make workflow-offline-dry # 离线流程预演（不执行 clone/pull）
 ```
 
 ## 📦 输出文件
@@ -278,6 +295,25 @@ make audit
 make audit-deep
 ```
 
+## 🧭 一键工作流模式
+
+```bash
+# 抓取 + 统计
+python3 scripts/run_workflow.py --mode refresh --out-dir data
+
+# 抓取 + 统计 + 审核（推荐）
+python3 scripts/run_workflow.py --mode secure-refresh --out-dir data
+
+# 抓取 + 统计 + 审核 + 集合整理
+python3 scripts/run_workflow.py --mode full --out-dir data
+
+# 离线模式：拉取集合仓库 + 本地整理（需已有 skills 快照）
+python3 scripts/run_workflow.py --mode offline --out-dir data --skills-input data/skills.json
+
+# 仅预演离线流程（不执行 clone/pull）
+python3 scripts/run_workflow.py --mode offline --out-dir data --skills-input data/skills.json --bootstrap-dry-run --dry-run
+```
+
 ## 🔄 自动更新
 
 工作流文件：`.github/workflows/refresh-skills.yml`
@@ -297,6 +333,7 @@ soskill/
 ├── scripts/
 │   ├── fetch_skills.py       # 抓取脚本
 │   ├── audit_skills.py       # 风险审核脚本
+│   ├── run_workflow.py       # 一键工作流脚本
 │   ├── organize_collections.py
 │   └── bootstrap_collections.py
 ├── data/

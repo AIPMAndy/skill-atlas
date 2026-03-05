@@ -1,4 +1,4 @@
-.PHONY: refresh refresh-fast stats organize organize-local bootstrap-collections bootstrap-collections-dry offline-local audit audit-deep
+.PHONY: refresh refresh-fast stats organize organize-local bootstrap-collections bootstrap-collections-dry offline-local audit audit-deep workflow workflow-full workflow-offline workflow-offline-dry
 
 LOCAL_ROOT ?= .cache/collections
 
@@ -34,3 +34,15 @@ audit:
 
 audit-deep:
 	python3 scripts/audit_skills.py --input data/skills.json --output data/skills.audit.json --markdown docs/skills-audit.md --fetch-content --max-skills 500 --min-risk-score 2 --max-retries 2
+
+workflow:
+	python3 scripts/run_workflow.py --mode secure-refresh --out-dir data
+
+workflow-full:
+	python3 scripts/run_workflow.py --mode full --out-dir data
+
+workflow-offline:
+	python3 scripts/run_workflow.py --mode offline --out-dir data --skills-input data/skills.json --local-root "$(LOCAL_ROOT)"
+
+workflow-offline-dry:
+	python3 scripts/run_workflow.py --mode offline --out-dir data --skills-input data/skills.json --local-root "$(LOCAL_ROOT)" --bootstrap-dry-run --dry-run
