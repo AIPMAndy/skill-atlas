@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-03-05T13:36:24+00:00",
-  "total": 3127,
+  "generated_at": "2026-03-05T19:35:20+00:00",
+  "total": 3130,
   "sources": [
     {
       "source_id": "openai-curated",
       "type": "github_tree",
       "repo": "openai/skills",
       "branch": "main",
-      "count": 33,
+      "count": 35,
       "truncated": false,
-      "frontmatter_enriched": 33
+      "frontmatter_enriched": 35
     },
     {
       "source_id": "openai-system",
       "type": "github_tree",
       "repo": "openai/skills",
       "branch": "main",
-      "count": 2,
+      "count": 3,
       "truncated": false,
-      "frontmatter_enriched": 2
+      "frontmatter_enriched": 3
     },
     {
       "source_id": "voltagent-awesome",
@@ -29159,7 +29159,7 @@
     {
       "uid": "openai/skills:skills/.curated/openai-docs/SKILL.md",
       "name": "openai-docs",
-      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or explicit GPT-5.4 upgrade and prompt-upgrade guidance; prioritize OpenAI docs MCP tools, use bundled references only as helper context, and restrict any fallback browsing to official OpenAI domains.",
       "slug": "openai-docs",
       "repo": "openai/skills",
       "branch": "main",
@@ -29168,6 +29168,20 @@
       "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/openai-docs/SKILL.md",
       "source_ids": [
         "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.system/openai-docs/SKILL.md",
+      "name": "openai-docs",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or explicit GPT-5.4 upgrade and prompt-upgrade guidance; prioritize OpenAI docs MCP tools, use bundled references only as helper context, and restrict any fallback browsing to official OpenAI domains.",
+      "slug": "openai-docs",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.system/openai-docs/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.system/openai-docs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.system/openai-docs/SKILL.md",
+      "source_ids": [
+        "openai-system"
       ]
     },
     {
@@ -31245,6 +31259,20 @@
       "path": "skills/.curated/playwright/SKILL.md",
       "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/playwright/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/playwright-interactive/SKILL.md",
+      "name": "playwright-interactive",
+      "description": "Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging.",
+      "slug": "playwright-interactive",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/playwright-interactive/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/playwright-interactive/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/playwright-interactive/SKILL.md",
       "source_ids": [
         "openai-curated"
       ]
@@ -36785,6 +36813,20 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/slides/SKILL.md",
+      "name": "slides",
+      "description": "Create and edit presentation slide decks (`.pptx`) with PptxGenJS, bundled layout helpers, and render/validation utilities. Use when tasks involve building a new PowerPoint deck, recreating slides from screenshots/PDFs/reference decks, modifying slide content while preserving editable output, adding charts/diagrams/visuals, or diagnosing layout issues such as overflow, overlaps, and font substitution.",
+      "slug": "slides",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/slides/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/slides/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/slides/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openclaw/skills:skills/nitishgargiitd/slides-cog/SKILL.md",
       "name": "slides-cog",
       "description": "",
@@ -37642,7 +37684,7 @@
     {
       "uid": "openai/skills:skills/.curated/spreadsheet/SKILL.md",
       "name": "spreadsheet",
-      "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.",
+      "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) with formula-aware workflows, cached recalculation, and visual review.",
       "slug": "spreadsheet",
       "repo": "openai/skills",
       "branch": "main",
