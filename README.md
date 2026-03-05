@@ -7,6 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/AIPMAndy/soskill?style=social)](https://github.com/AIPMAndy/soskill)
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://python.org)
+[![Skill Audit](https://img.shields.io/badge/Skill%20Audit-Enabled-success)](docs/skills-audit.md)
 
 [English](#english) | [简体中文](#中文)
 
@@ -35,6 +36,15 @@ SoSkill is an open-source Skill search and aggregation engine that:
 | `AIPMAndy/awesome-openclaw-skills-CN` | Community (Chinese) |
 
 > Sources are configured in `config/sources.json` — easily extensible.
+
+## 🆚 Why Skill Audit Matters
+
+| Problem | Without audit | With SoSkill audit |
+|---|---|---|
+| Dangerous shell patterns | Hard to detect manually at scale | Rule-based scan for `curl|bash`, destructive commands |
+| Prompt override / jailbreak text | Often hidden in long docs | Pattern detection + severity levels |
+| Credential leakage hints | Easy to miss in community skills | Dedicated credential-risk rules + report |
+| Trust before adoption | Subjective judgement | Repeatable JSON/Markdown evidence |
 
 ## ⚡ Quick Start
 
@@ -116,6 +126,25 @@ Default risk checks include:
 - prompt override / jailbreak-like instructions
 - credential collection / exfiltration hints
 
+Risk levels:
+
+| Level | Meaning | Action |
+|---|---|---|
+| `critical` | likely unsafe or directly destructive | block immediately, manual review required |
+| `high` | strong suspicious signals | quarantine and review |
+| `medium` | risky pattern in context | review before use |
+| `low` | weak signal | track and monitor |
+| `clean` | no matched rules | still review for business fit |
+
+Recommended release gate:
+
+```bash
+make refresh
+make audit
+# Optional deep scan for top-N skills before release
+make audit-deep
+```
+
 ## 🤝 Author
 
 **Andy | AI Product Expert**
@@ -148,6 +177,15 @@ SoSkill 是一个开源的 Skill 搜索与聚合引擎：
 | `AIPMAndy/awesome-openclaw-skills-CN` | 社区（中文） |
 
 > 数据源配置在 `config/sources.json`，可自由扩展。
+
+## 🆚 为什么需要 Skill 安全审核
+
+| 问题 | 没有审核 | 使用 SoSkill 审核 |
+|---|---|---|
+| 危险命令识别 | 靠人工逐条看，成本高且易漏 | 规则扫描 `curl|bash`、破坏性命令 |
+| 越狱/覆盖指令 | 隐藏在长文本中不易发现 | 模式匹配并给出风险等级 |
+| 凭据泄露风险 | 社区 Skill 质量参差不齐 | 凭据相关风险规则自动标注 |
+| 上线前可信度 | 主观判断 | 结构化 JSON/Markdown 审计证据 |
 
 ## ⚡ 快速开始
 
@@ -220,6 +258,25 @@ make audit-deep
 - 远程执行管道（如 `curl|bash`、`wget|sh`）
 - 提示词越狱/覆盖安全策略语句
 - 敏感凭据收集与外传迹象（token/secret/password）
+
+风险等级说明：
+
+| 等级 | 含义 | 建议动作 |
+|---|---|---|
+| `critical` | 高概率恶意或直接破坏性行为 | 立即阻断并人工复核 |
+| `high` | 明显可疑信号 | 隔离并重点审核 |
+| `medium` | 上下文相关风险 | 上线前复审 |
+| `low` | 弱风险信号 | 持续观察 |
+| `clean` | 未命中规则 | 仍需业务层复核 |
+
+推荐上线前流程：
+
+```bash
+make refresh
+make audit
+# 发布前可追加深度审核
+make audit-deep
+```
 
 ## 🔄 自动更新
 
