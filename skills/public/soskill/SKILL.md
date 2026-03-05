@@ -1,6 +1,6 @@
 ---
 name: soskill
-description: Aggregate and analyze Codex/OpenClaw skills across GitHub sources with deterministic scripts. Use when tasks involve fetching SKILL.md indexes from official or community repositories, generating skills snapshots (JSON/CSV/Markdown), printing source and repository statistics, bootstrapping local collection clones, or organizing collection coverage reports.
+description: Aggregate and analyze Codex/OpenClaw skills across GitHub sources with deterministic scripts. Use when tasks involve fetching SKILL.md indexes from official or community repositories, generating skills snapshots (JSON/CSV/Markdown), printing source and repository statistics, bootstrapping local collection clones, organizing collection coverage reports, or running risk audits for suspicious skill content.
 ---
 
 # Soskill
@@ -32,6 +32,7 @@ Set `GITHUB_TOKEN` (or `GH_TOKEN`) when you need higher GitHub API limits.
 - Print quick totals and top repositories: run `scripts/print_stats.py`.
 - Build collection readiness report from index data: run `scripts/organize_collections.py`.
 - Clone/pull collection repos for offline scanning: run `scripts/bootstrap_collections.py`.
+- Audit suspicious skill patterns (dangerous commands, prompt override, credential leakage): run `scripts/audit_skills.py`.
 
 ## Task Playbooks
 
@@ -74,6 +75,17 @@ python3 "$SKILL_DIR/scripts/bootstrap_collections.py" \
 ```
 
 Use `--dry-run` to preview clone/pull actions without changing local repositories.
+
+### 5. Audit Skill Safety Risks
+```bash
+python3 "$SKILL_DIR/scripts/audit_skills.py" \
+  --input "$OUT_DIR/skills.json" \
+  --output "$OUT_DIR/skills.audit.json" \
+  --markdown "$OUT_DIR/skills-audit.md" \
+  --min-risk-score 2
+```
+
+For deep scan, add `--fetch-content --max-skills 500`.
 
 ## References
 - `references/sources.json`: source definitions for index fetching.

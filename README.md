@@ -23,6 +23,7 @@ SoSkill is an open-source Skill search and aggregation engine that:
 - 🔄 **Auto-fetches** skills from multiple sources (official + community)
 - 📊 **Unifies** structure (name, description, source, link, path)
 - ⏰ **Auto-updates** via GitHub Actions (scheduled + manual trigger)
+- 🛡️ **Audits risk patterns** in skill metadata/content (malicious command, prompt override, credential leak hints)
 - 📁 **Outputs** reusable data files (JSON/CSV/Markdown)
 
 ## ✨ Current Data Sources
@@ -96,6 +97,24 @@ After installation, restart Codex to pick up the new skill.
 | `data/skills.csv` | For filtering & analysis |
 | `docs/latest.md` | Latest fetch summary |
 | `data/collections.json` | Structured collection data |
+| `data/skills.audit.json` | Skill risk audit result (structured findings) |
+| `docs/skills-audit.md` | Human-readable security audit report |
+
+## 🛡️ Skill Safety Audit
+
+```bash
+# Fast local audit (metadata-only, no network fetch)
+make audit
+
+# Deep audit (fetch SKILL.md content, with retries)
+make audit-deep
+```
+
+Default risk checks include:
+- destructive commands (`rm -rf`, force reset/clean)
+- remote execution pipes (`curl|bash`, `wget|sh`)
+- prompt override / jailbreak-like instructions
+- credential collection / exfiltration hints
 
 ## 🤝 Author
 
@@ -117,6 +136,7 @@ SoSkill 是一个开源的 Skill 搜索与聚合引擎：
 - 🔄 **自动抓取** 多来源 Skill（官方 + 社区）
 - 📊 **统一结构**（名称、描述、来源、链接、路径）
 - ⏰ **自动更新**（GitHub Actions 定时 + 手动触发）
+- 🛡️ **安全审核** Skill 文本中的风险模式（恶意命令、越权提示、凭据外传等）
 - 📁 **输出文件**（JSON/CSV/Markdown）
 
 ## ✨ 当前数据源
@@ -170,6 +190,8 @@ make refresh-fast     # 快速抓取（本地调试）
 make stats            # 查看统计摘要
 make organize         # 整理开源集合（离线）
 make offline-local    # 自动拉取 + 离线整理
+make audit            # Skill 风险审核（离线元数据）
+make audit-deep       # Skill 深度审核（联网拉取 SKILL.md）
 ```
 
 ## 📦 输出文件
@@ -180,6 +202,24 @@ make offline-local    # 自动拉取 + 离线整理
 | `data/skills.csv` | 便于筛选分析 |
 | `docs/latest.md` | 最新抓取摘要 |
 | `data/collections.json` | 结构化集合数据 |
+| `data/skills.audit.json` | Skill 风险审核结构化结果 |
+| `docs/skills-audit.md` | Skill 风险审核报告（Markdown） |
+
+## 🛡️ Skill 安全审核模块
+
+```bash
+# 快速审核：不联网，仅基于 skills.json 的元数据
+make audit
+
+# 深度审核：联网拉取 raw SKILL.md 内容后再审计
+make audit-deep
+```
+
+默认规则会检测：
+- 危险命令（如 `rm -rf`、`git reset --hard`、`git clean -fdx`）
+- 远程执行管道（如 `curl|bash`、`wget|sh`）
+- 提示词越狱/覆盖安全策略语句
+- 敏感凭据收集与外传迹象（token/secret/password）
 
 ## 🔄 自动更新
 
@@ -199,13 +239,16 @@ soskill/
 │   └── collections.seed.json # 集合清单
 ├── scripts/
 │   ├── fetch_skills.py       # 抓取脚本
+│   ├── audit_skills.py       # 风险审核脚本
 │   ├── organize_collections.py
 │   └── bootstrap_collections.py
 ├── data/
 │   ├── skills.json           # 聚合数据
-│   └── skills.csv
+│   ├── skills.csv
+│   └── skills.audit.json     # 审核结果
 ├── docs/
 │   ├── latest.md             # 最新摘要
+│   ├── skills-audit.md       # 审核报告
 │   └── ARCHITECTURE.md       # 架构说明
 └── .github/workflows/
     └── refresh-skills.yml    # 自动化工作流

@@ -1,4 +1,4 @@
-.PHONY: refresh refresh-fast stats organize organize-local bootstrap-collections bootstrap-collections-dry offline-local
+.PHONY: refresh refresh-fast stats organize organize-local bootstrap-collections bootstrap-collections-dry offline-local audit audit-deep
 
 LOCAL_ROOT ?= .cache/collections
 
@@ -28,3 +28,9 @@ bootstrap-collections-dry:
 offline-local:
 	$(MAKE) bootstrap-collections LOCAL_ROOT="$(LOCAL_ROOT)"
 	$(MAKE) organize-local LOCAL_ROOT="$(LOCAL_ROOT)"
+
+audit:
+	python3 scripts/audit_skills.py --input data/skills.json --output data/skills.audit.json --markdown docs/skills-audit.md --min-risk-score 2
+
+audit-deep:
+	python3 scripts/audit_skills.py --input data/skills.json --output data/skills.audit.json --markdown docs/skills-audit.md --fetch-content --max-skills 500 --min-risk-score 2 --max-retries 2

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-05T13:51:01+00:00",
+  "input": "data/skills.json",
+  "rules_version": "2026-03-05",
+  "summary": {
+    "input_total": 3127,
+    "scanned_total": 3127,
+    "reported_total": 0,
+    "fetch_content": false,
+    "fetch_attempted": 0,
+    "fetch_success": 0,
+    "fetch_failed": 0,
+    "min_risk_score": 2,
+    "risk_levels": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "clean": 3127
+    }
+  },
+  "rule_hits": {},
+  "audits": []
+}

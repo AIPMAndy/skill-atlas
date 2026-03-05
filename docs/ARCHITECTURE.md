@@ -32,6 +32,16 @@
    - `data/collections.json`
    - `docs/collections.md`
 
+## Skill Security Audit Pipeline
+
+1. Load snapshot from `data/skills.json`
+2. Scan metadata fields (`name` / `description`) for risk rules
+3. Optional deep mode: fetch `raw_url` and scan SKILL content
+4. Score and classify each skill risk level (`critical/high/medium/low/clean`)
+5. Write outputs:
+   - `data/skills.audit.json`
+   - `docs/skills-audit.md`
+
 ## Fault Tolerance
 
 - Each source is isolated; one source failure does not break the full run.
