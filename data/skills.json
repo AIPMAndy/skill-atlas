@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-10T02:49:26+00:00",
-  "total": 3131,
+  "generated_at": "2026-03-10T07:07:28+00:00",
+  "total": 3132,
   "sources": [
     {
       "source_id": "openai-curated",
@@ -24,7 +24,7 @@
       "source_id": "voltagent-awesome",
       "type": "markdown_links",
       "readme_url": "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md",
-      "count": 846
+      "count": 847
     },
     {
       "source_id": "aipmandy-cn",
@@ -6455,6 +6455,20 @@
       "path": "skills/xukp20/arxiv-search-collector/SKILL.md",
       "html_url": "https://github.com/openclaw/skills/blob/main/skills/xukp20/arxiv-search-collector/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/xukp20/arxiv-search-collector/SKILL.md",
+      "source_ids": [
+        "voltagent-awesome"
+      ]
+    },
+    {
+      "uid": "openclaw/skills:skills/willamhou/arxiv-source/SKILL.md",
+      "name": "arxiv-source",
+      "description": "",
+      "slug": "arxiv-source",
+      "repo": "openclaw/skills",
+      "branch": "main",
+      "path": "skills/willamhou/arxiv-source/SKILL.md",
+      "html_url": "https://github.com/openclaw/skills/blob/main/skills/willamhou/arxiv-source/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/willamhou/arxiv-source/SKILL.md",
       "source_ids": [
         "voltagent-awesome"
       ]
