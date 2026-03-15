@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-15T07:12:44+00:00",
-  "total": 3136,
+  "generated_at": "2026-03-15T13:16:18+00:00",
+  "total": 3134,
   "sources": [
     {
       "source_id": "openai-curated",
@@ -24,7 +24,7 @@
       "source_id": "voltagent-awesome",
       "type": "markdown_links",
       "readme_url": "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md",
-      "count": 851
+      "count": 849
     },
     {
       "source_id": "aipmandy-cn",
@@ -6117,34 +6117,6 @@
       "path": "skills/eftalyurtseven/ar-filter-generation/SKILL.md",
       "html_url": "https://github.com/openclaw/skills/blob/main/skills/eftalyurtseven/ar-filter-generation/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/eftalyurtseven/ar-filter-generation/SKILL.md",
-      "source_ids": [
-        "voltagent-awesome"
-      ]
-    },
-    {
-      "uid": "openclaw/skills:skills/cryptotooldev/arb-injection/SKILL.md",
-      "name": "arb-injection",
-      "description": "",
-      "slug": "arb-injection",
-      "repo": "openclaw/skills",
-      "branch": "main",
-      "path": "skills/cryptotooldev/arb-injection/SKILL.md",
-      "html_url": "https://github.com/openclaw/skills/blob/main/skills/cryptotooldev/arb-injection/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/cryptotooldev/arb-injection/SKILL.md",
-      "source_ids": [
-        "voltagent-awesome"
-      ]
-    },
-    {
-      "uid": "openclaw/skills:skills/cryptotooldev/arbinjectionskill/SKILL.md",
-      "name": "arbinjectionskill",
-      "description": "",
-      "slug": "arbinjectionskill",
-      "repo": "openclaw/skills",
-      "branch": "main",
-      "path": "skills/cryptotooldev/arbinjectionskill/SKILL.md",
-      "html_url": "https://github.com/openclaw/skills/blob/main/skills/cryptotooldev/arbinjectionskill/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/cryptotooldev/arbinjectionskill/SKILL.md",
       "source_ids": [
         "voltagent-awesome"
       ]
