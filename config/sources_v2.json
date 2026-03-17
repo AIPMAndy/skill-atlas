@@ -1,0 +1,270 @@
+{
+  "version": "2.0",
+  "settings": {
+    "incremental": true,
+    "cache_ttl_hours": 6,
+    "min_quality_score": 0.3,
+    "max_concurrent_fetch": 3,
+    "retry_policy": {
+      "max_retries": 3,
+      "backoff_multiplier": 2,
+      "initial_delay_seconds": 1
+    }
+  },
+  "sources": [
+    {
+      "id": "openai-curated",
+      "type": "github_tree",
+      "priority": 1,
+      "weight": 2.0,
+      "repo": "openai/skills",
+      "branch": "main",
+      "include_prefixes": ["skills/.curated/"],
+      "frontmatter": true,
+      "frontmatter_limit": 400,
+      "fallbacks": [
+        {
+          "type": "github_listing",
+          "url": "https://github.com/openai/skills/tree/main/skills/.curated"
+        },
+        {
+          "type": "cache",
+          "max_age_hours": 48
+        }
+      ],
+      "quality_indicators": {
+        "official": true,
+        "verified": true
+      }
+    },
+    {
+      "id": "openai-system",
+      "type": "github_tree",
+      "priority": 1,
+      "weight": 1.8,
+      "repo": "openai/skills",
+      "branch": "main",
+      "include_prefixes": ["skills/.system/"],
+      "frontmatter": true,
+      "frontmatter_limit": 100,
+      "fallbacks": [
+        {
+          "type": "github_listing",
+          "url": "https://github.com/openai/skills/tree/main/skills/.system"
+        }
+      ],
+      "quality_indicators": {
+        "official": true,
+        "system": true
+      }
+    },
+    {
+      "id": "voltagent-awesome",
+      "type": "markdown_links",
+      "priority": 2,
+      "weight": 1.0,
+      "readme_url": "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md",
+      "link_regex": "https://github.com/([^/]+/[^/]+)/(?:tree|blob)/([^/]+)/([^)\\s#]+SKILL\\.md)",
+      "enrich_from_github": true,
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 24
+        }
+      ],
+      "quality_indicators": {
+        "community": true,
+        "curated": true
+      }
+    },
+    {
+      "id": "aipmandy-cn",
+      "type": "markdown_links",
+      "priority": 2,
+      "weight": 1.2,
+      "readme_url": "https://raw.githubusercontent.com/AIPMAndy/awesome-openclaw-skills-CN/main/README.md",
+      "link_regex": "https://github.com/([^/]+/[^/]+)/(?:tree|blob)/([^/]+)/([^)\\s#]+SKILL\\.md)",
+      "enrich_from_github": true,
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 24
+        }
+      ],
+      "quality_indicators": {
+        "community": true,
+        "chinese": true,
+        "maintained_by": "AIPMAndy"
+      }
+    },
+    {
+      "id": "clawhub-registry",
+      "type": "api_endpoint",
+      "priority": 3,
+      "weight": 0.8,
+      "enabled": false,
+      "url": "https://api.clawhub.com/v1/skills",
+      "auth": {
+        "type": "bearer",
+        "env_var": "CLAWHUB_TOKEN"
+      },
+      "pagination": {
+        "type": "cursor",
+        "cursor_field": "next_cursor"
+      },
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 72
+        }
+      ]
+    },
+    {
+      "id": "local-dev-skills",
+      "type": "local_directory",
+      "priority": 4,
+      "weight": 0.5,
+      "enabled": false,
+      "path": "~/workspace/openclaw-skills",
+      "pattern": "**/SKILL.md",
+      "watch": true,
+      "quality_indicators": {
+        "local": true,
+        "development": true
+      }
+    },
+    {
+      "id": "anthropics-skills",
+      "type": "github_tree",
+      "priority": 1,
+      "weight": 1.9,
+      "repo": "anthropics/skills",
+      "branch": "main",
+      "include_prefixes": ["skills/"],
+      "exclude_prefixes": ["skills/.system/", "skills/.curated/"],
+      "frontmatter": true,
+      "frontmatter_limit": 200,
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 24
+        }
+      ],
+      "quality_indicators": {
+        "official": true,
+        "anthropic": true
+      }
+    },
+    {
+      "id": "github-topics-openclaw",
+      "type": "github_search",
+      "priority": 3,
+      "weight": 0.7,
+      "enabled": true,
+      "query": "topic:openclaw topic:skills filename:SKILL.md",
+      "sort": "stars",
+      "order": "desc",
+      "per_page": 100,
+      "enrich_from_github": true,
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 12
+        }
+      ],
+      "quality_indicators": {
+        "community": true,
+        "discovered": true
+      }
+    },
+    {
+      "id": "github-topics-codex",
+      "type": "github_search",
+      "priority": 3,
+      "weight": 0.7,
+      "enabled": true,
+      "query": "topic:codex topic:skills filename:SKILL.md",
+      "sort": "stars",
+      "order": "desc",
+      "per_page": 100,
+      "enrich_from_github": true,
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 12
+        }
+      ],
+      "quality_indicators": {
+        "community": true,
+        "discovered": true
+      }
+    },
+    {
+      "id": "aipmandy-repos",
+      "type": "github_user_repos",
+      "priority": 2,
+      "weight": 1.5,
+      "enabled": true,
+      "username": "AIPMAndy",
+      "include_topics": ["ai", "openai", "claude", "skills", "agent"],
+      "min_stars": 1,
+      "enrich_from_github": true,
+      "fallbacks": [
+        {
+          "type": "cache",
+          "max_age_hours": 6
+        }
+      ],
+      "quality_indicators": {
+        "curated": true,
+        "maintained_by": "AIPMAndy"
+      }
+    },
+    {
+      "id": "pypi-openclaw",
+      "type": "pypi_search",
+      "priority": 4,
+      "weight": 0.6,
+      "enabled": false,
+      "query": "openclaw OR codex OR claude-skill",
+      "max_results": 50,
+      "quality_indicators": {
+        "package": true,
+        "installable": true
+      }
+    },
+    {
+      "id": "npm-openclaw",
+      "type": "npm_search",
+      "priority": 4,
+      "weight": 0.6,
+      "enabled": false,
+      "query": "openclaw OR codex-skill",
+      "max_results": 50,
+      "quality_indicators": {
+        "package": true,
+        "installable": true
+      }
+    }
+  ],
+  "scoring": {
+    "weights": {
+      "official": 2.0,
+      "stars": 0.001,
+      "forks": 0.002,
+      "recent_update": 1.5,
+      "has_tests": 1.2,
+      "has_docs": 1.1,
+      "security_audit_pass": 1.3
+    },
+    "decay": {
+      "half_life_days": 90,
+      "min_score": 0.1
+    }
+  },
+  "deduplication": {
+    "strategy": "uid_primary",
+    "merge_fields": ["name", "description", "source_ids"],
+    "conflict_resolution": "highest_priority"
+  }
+}
