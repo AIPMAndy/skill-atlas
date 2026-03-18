@@ -90,13 +90,75 @@ make audit-deep     # 深度审核（联网拉取 SKILL.md 内容）
 
 ---
 
-## 📊 当前数据源
+## 📊 当前数据源（v2.0）
 
-| 来源 | 类型 |
+| 来源 | 类型 | 状态 |
+|------|------|------|
+| `openai/skills` | 官方（`.curated` + `.system`） | ✅ 活跃 |
+| `anthropics/skills` | Anthropic 官方 | ✅ 新增 |
+| `VoltAgent/awesome-openclaw-skills` | 社区 | ✅ 活跃 |
+| `AIPMAndy/awesome-openclaw-skills-CN` | 社区（中文） | ✅ 活跃 |
+| `AIPMAndy/repos` | AIPMAndy 的 18 个项目 | ✅ 新增 |
+| GitHub Topics (openclaw/codex) | 自动发现 | ✅ 新增 |
+| PyPI/NPM Registry | 包管理器 | ⏳ 待启用 |
+
+**总计**: 6+ 数据源，自动聚合，增量更新
+
+---
+
+## 🚀 v2.0 新特性
+
+### 增量更新（ETag 缓存）
+```bash
+# 只抓取变更的数据，节省 API 配额
+python3 scripts/fetcher_v2.py --config config/sources_v2.json
+```
+
+### 质量评分系统
+每个 Skill 自动计算质量分：
+- ⭐ Stars × 权重
+- 🍴 Forks × 权重
+- 📅 更新新鲜度
+- 🧪 是否有测试
+- 📖 是否有文档
+- 🛡️ 安全审核结果
+
+### GitHub 项目推荐
+```bash
+# 基于 AIPMAndy 的 GitHub 项目智能推荐
+python3 scripts/recommender.py
+```
+
+---
+
+## 📈 项目统计
+
+| 指标 | 数值 |
 |------|------|
-| `openai/skills` | 官方（`.curated` + `.system`） |
-| `VoltAgent/awesome-openclaw-skills` | 社区 |
-| `AIPMAndy/awesome-openclaw-skills-CN` | 社区（中文） |
+| 数据源 | 6+ |
+| 代码行数 | 4800+ |
+| 测试覆盖 | 2 个测试文件 |
+| 自动更新 | 每 6 小时 |
+| 安全规则 | 10+ 条 |
+
+---
+
+## 🗺️ Roadmap
+
+- [x] 多源聚合 + 统一结构
+- [x] 安全审核引擎（规则扫描 + 分级）
+- [x] GitHub Actions 自动刷新
+- [x] Codex Skill 安装包
+- [x] 增量更新 + 缓存
+- [x] 质量评分系统
+- [x] GitHub 项目推荐
+- [ ] Web UI 搜索界面
+- [ ] AI 驱动的语义搜索
+- [ ] Skill 相似度去重
+
+---
+
+## 📊 历史数据源
 
 > 配置在 `config/sources.json`，可自由扩展。
 
@@ -194,6 +256,22 @@ soskill/
 - [ ] Web UI 搜索界面
 - [ ] AI 驱动的语义搜索
 - [ ] Skill 相似度去重
+
+---
+
+## 🌟 谁在用
+
+> 如果你在用 SoSkill，欢迎加 ⭐ 并告诉我！
+
+- [AIPMAndy](https://github.com/AIPMAndy) - 作者自用
+- [DNA Memory](https://github.com/AIPMAndy/dna-memory) - 集成 Skill 安全审核
+- [KnowMe](https://github.com/AIPMAndy/KnowMe) - 推荐 Skill 给用户
+
+---
+
+## 📈 Star 历史
+
+[![Star History Chart](https://api.star-history.com/svg?repos=AIPMAndy/soskill&type=Date)](https://star-history.com/#AIPMAndy/soskill&Date)
 
 ---
 
