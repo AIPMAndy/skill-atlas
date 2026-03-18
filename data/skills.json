@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T19:19:36+00:00",
+  "generated_at": "2026-03-18T03:19:40+00:00",
   "total": 2748,
   "sources": [
     {
@@ -31594,7 +31594,7 @@
     {
       "uid": "openai/skills:skills/.curated/sora/SKILL.md",
       "name": "sora",
-      "description": "Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI\\u2019s video API using the bundled CLI (`scripts/sora.py`), including requests like \\u201cgenerate AI video,\\u201d \\u201cSora,\\u201d \\u201cvideo remix,\\u201d \\u201cdownload video/thumbnail/spritesheet,\\u201d and batch video generation; requires `OPENAI_API_KEY` and Sora API access.",
+      "description": "Use when the user asks to generate, edit, extend, poll, list, download, or delete Sora videos, create reusable non-human Sora character references, or run local multi-video queues via the bundled CLI (`scripts/sora.py`); includes requests like: (i) generate AI video, (ii) edit this Sora clip, (iii) extend this video, (iv) create a character reference, (v) download video/thumbnail/spritesheet, and (vi) Sora batch planning; requires `OPENAI_API_KEY` and Sora API access.",
       "slug": "sora",
       "repo": "openai/skills",
       "branch": "main",
