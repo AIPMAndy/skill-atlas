@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-03-20T13:33:53+00:00",
-  "total": 2748,
+  "generated_at": "2026-03-20T19:05:55+00:00",
+  "total": 2749,
   "sources": [
     {
       "source_id": "openai-curated",
       "type": "github_tree",
       "repo": "openai/skills",
       "branch": "main",
-      "count": 35,
+      "count": 36,
       "truncated": false,
-      "frontmatter_enriched": 35
+      "frontmatter_enriched": 36
     },
     {
       "source_id": "openai-system",
@@ -13613,6 +13613,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/steipete/frontend-design/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/frontend-skill/SKILL.md",
+      "name": "frontend-skill",
+      "description": "Use when the task asks for a visually strong landing page, website, app, prototype, demo, or game UI. This skill enforces restrained composition, image-led hierarchy, cohesive content structure, and tasteful motion while avoiding generic cards, weak branding, and UI clutter.",
+      "slug": "frontend-skill",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/frontend-skill/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/frontend-skill/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/frontend-skill/SKILL.md",
+      "source_ids": [
+        "openai-curated"
       ]
     },
     {
