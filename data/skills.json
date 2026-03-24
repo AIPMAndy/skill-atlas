@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-03-24T13:50:07+00:00",
-  "total": 2749,
+  "generated_at": "2026-03-24T19:20:51+00:00",
+  "total": 2756,
   "sources": [
     {
       "source_id": "openai-curated",
       "type": "github_tree",
       "repo": "openai/skills",
       "branch": "main",
-      "count": 36,
+      "count": 42,
       "truncated": false,
-      "frontmatter_enriched": 36
+      "frontmatter_enriched": 42
     },
     {
       "source_id": "openai-system",
@@ -24,7 +24,7 @@
       "source_id": "voltagent-awesome",
       "type": "markdown_links",
       "readme_url": "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md",
-      "count": 2
+      "count": 3
     },
     {
       "source_id": "aipmandy-cn",
@@ -4470,6 +4470,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/xenofex7/bookstack/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openclaw/skills:skills/tonypk/boss-ai-agent/SKILL.md",
+      "name": "boss-ai-agent",
+      "description": "",
+      "slug": "boss-ai-agent",
+      "repo": "openclaw/skills",
+      "branch": "main",
+      "path": "skills/tonypk/boss-ai-agent/SKILL.md",
+      "html_url": "https://github.com/openclaw/skills/blob/main/skills/tonypk/boss-ai-agent/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/tonypk/boss-ai-agent/SKILL.md",
+      "source_ids": [
+        "voltagent-awesome"
       ]
     },
     {
@@ -12762,15 +12776,99 @@
       ]
     },
     {
+      "uid": "openai/skills:skills/.curated/figma-code-connect-components/SKILL.md",
+      "name": "figma-code-connect-components",
+      "description": "Connects Figma design components to code components using Code Connect mapping tools. Use when user says \"code connect\", \"connect this component to code\", \"map this component\", \"link component to code\", \"create code connect mapping\", or wants to establish mappings between Figma designs and code implementations. For canvas writes via `use_figma`, use `figma-use`.",
+      "slug": "figma-code-connect-components",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-code-connect-components/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-code-connect-components/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-code-connect-components/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/figma-create-design-system-rules/SKILL.md",
+      "name": "figma-create-design-system-rules",
+      "description": "Generates custom design system rules for the user's codebase. Use when user says \"create design system rules\", \"generate rules for my project\", \"set up design rules\", \"customize design system guidelines\", or wants to establish project-specific conventions for Figma-to-code workflows. Requires Figma MCP server connection.",
+      "slug": "figma-create-design-system-rules",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-create-design-system-rules/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-create-design-system-rules/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-create-design-system-rules/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/figma-create-new-file/SKILL.md",
+      "name": "figma-create-new-file",
+      "description": "Create a new blank Figma file. Use when the user wants to create a new Figma design or FigJam file, or when you need a new file before calling use_figma. Handles plan resolution via whoami if needed. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard)",
+      "slug": "figma-create-new-file",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-create-new-file/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-create-new-file/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-create-new-file/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/figma-generate-design/SKILL.md",
+      "name": "figma-generate-design",
+      "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code'. This is the preferred workflow skill whenever the user wants to build or update a full page, screen, or view in Figma from code or a description. Discovers design system components, variables, and styles via search_design_system, imports them, and assembles screens incrementally section-by-section using design system tokens instead of hardcoded values.",
+      "slug": "figma-generate-design",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-generate-design/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-generate-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-generate-design/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/figma-generate-library/SKILL.md",
+      "name": "figma-generate-library",
+      "description": "Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together.",
+      "slug": "figma-generate-library",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-generate-library/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-generate-library/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-generate-library/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
       "uid": "openai/skills:skills/.curated/figma-implement-design/SKILL.md",
       "name": "figma-implement-design",
-      "description": "Translate Figma nodes into production-ready code with 1:1 visual fidelity using the Figma MCP workflow (design context, screenshots, assets, and project-convention translation). Trigger when the user provides Figma URLs or node IDs, or asks to implement designs or components that must match Figma specs. Requires a working Figma MCP server connection.",
+      "description": "Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions \"implement design\", \"generate code\", \"implement component\", provides Figma URLs, or asks to build components matching Figma specs. For Figma canvas writes via `use_figma`, use `figma-use`.",
       "slug": "figma-implement-design",
       "repo": "openai/skills",
       "branch": "main",
       "path": "skills/.curated/figma-implement-design/SKILL.md",
       "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-implement-design/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-implement-design/SKILL.md",
+      "source_ids": [
+        "openai-curated"
+      ]
+    },
+    {
+      "uid": "openai/skills:skills/.curated/figma-use/SKILL.md",
+      "name": "figma-use",
+      "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically.",
+      "slug": "figma-use",
+      "repo": "openai/skills",
+      "branch": "main",
+      "path": "skills/.curated/figma-use/SKILL.md",
+      "html_url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-use/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/figma-use/SKILL.md",
       "source_ids": [
         "openai-curated"
       ]
