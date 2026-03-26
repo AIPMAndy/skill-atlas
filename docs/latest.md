@@ -1,7 +1,7 @@
 # SoSkill Snapshot
 
-- Generated at: `2026-03-26T07:36:03+00:00`
-- Total unique skills: `2756`
+- Generated at: `2026-03-26T13:58:10+00:00`
+- Total unique skills: `2757`
 
 ## Source Coverage
 
@@ -9,7 +9,7 @@
 |---|---:|---:|---|
 | openai-curated | github_tree | 42 | openai/skills; frontmatter=42 |
 | openai-system | github_tree | 3 | openai/skills; frontmatter=3 |
-| voltagent-awesome | markdown_links | 3 |  |
+| voltagent-awesome | markdown_links | 4 |  |
 | aipmandy-cn | markdown_links | 2709 |  |
 
 ## Sample Skills (Top 100)
@@ -92,6 +92,7 @@
 | agent-reflect | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/stevengonsalvez/agent-reflect/SKILL.md) |
 | agent-registry | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/matrixy/agent-registry/SKILL.md) |
 | agent-relay-digest | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/orosha-ai/agent-relay-digest/SKILL.md) |
+| agent-security-harness | voltagent-awesome | [open](https://github.com/openclaw/skills/blob/main/skills/msaleme/agent-security-harness/SKILL.md) |
 | agent-self-introduction | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/ronwithlove/agent-self-introduction/SKILL.md) |
 | agent-selfie | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/iisweetheartii/agent-selfie/SKILL.md) |
 | agent-sentinel | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/jimmystacks/agent-sentinel/SKILL.md) |
@@ -115,4 +116,3 @@
 | agentic-paper-digest | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/matanle51/agentic-paper-digest/SKILL.md) |
 | agentic-paper-digest-skill | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/matanle51/agentic-paper-digest-skill/SKILL.md) |
 | agenticflow-skill | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/seanphan/agenticflow-skill/SKILL.md) |
-| agentlens | aipmandy-cn | [open](https://github.com/openclaw/skills/blob/main/skills/nguyenphutrong/agentlens/SKILL.md) |

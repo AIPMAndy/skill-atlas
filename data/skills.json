@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-26T07:36:03+00:00",
-  "total": 2756,
+  "generated_at": "2026-03-26T13:58:10+00:00",
+  "total": 2757,
   "sources": [
     {
       "source_id": "openai-curated",
@@ -24,7 +24,7 @@
       "source_id": "voltagent-awesome",
       "type": "markdown_links",
       "readme_url": "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md",
-      "count": 3
+      "count": 4
     },
     {
       "source_id": "aipmandy-cn",
@@ -1096,6 +1096,20 @@
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/orosha-ai/agent-relay-digest/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openclaw/skills:skills/msaleme/agent-security-harness/SKILL.md",
+      "name": "agent-security-harness",
+      "description": "",
+      "slug": "agent-security-harness",
+      "repo": "openclaw/skills",
+      "branch": "main",
+      "path": "skills/msaleme/agent-security-harness/SKILL.md",
+      "html_url": "https://github.com/openclaw/skills/blob/main/skills/msaleme/agent-security-harness/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/msaleme/agent-security-harness/SKILL.md",
+      "source_ids": [
+        "voltagent-awesome"
       ]
     },
     {
