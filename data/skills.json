@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-28T07:13:24+00:00",
-  "total": 2757,
+  "generated_at": "2026-03-28T13:18:33+00:00",
+  "total": 2758,
   "sources": [
     {
       "source_id": "openai-curated",
@@ -30,7 +30,7 @@
       "source_id": "aipmandy-cn",
       "type": "markdown_links",
       "readme_url": "https://raw.githubusercontent.com/AIPMAndy/awesome-openclaw-skills-CN/main/README.md",
-      "count": 2709
+      "count": 2710
     }
   ],
   "skills": [
@@ -19309,6 +19309,20 @@
       "path": "skills/abeljseba/makeovern/SKILL.md",
       "html_url": "https://github.com/openclaw/skills/blob/main/skills/abeljseba/makeovern/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/abeljseba/makeovern/SKILL.md",
+      "source_ids": [
+        "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openclaw/skills:skills/tonypk/management-brain/SKILL.md",
+      "name": "management-brain",
+      "description": "",
+      "slug": "management-brain",
+      "repo": "openclaw/skills",
+      "branch": "main",
+      "path": "skills/tonypk/management-brain/SKILL.md",
+      "html_url": "https://github.com/openclaw/skills/blob/main/skills/tonypk/management-brain/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/tonypk/management-brain/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
       ]
