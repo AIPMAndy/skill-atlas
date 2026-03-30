@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-30T07:59:52+00:00",
-  "total": 2758,
+  "generated_at": "2026-03-30T14:01:28+00:00",
+  "total": 2759,
   "sources": [
     {
       "source_id": "openai-curated",
@@ -30,7 +30,7 @@
       "source_id": "aipmandy-cn",
       "type": "markdown_links",
       "readme_url": "https://raw.githubusercontent.com/AIPMAndy/awesome-openclaw-skills-CN/main/README.md",
-      "count": 2710
+      "count": 2711
     }
   ],
   "skills": [
@@ -35017,6 +35017,20 @@
       "path": "skills/snail3d/tubeclaw/SKILL.md",
       "html_url": "https://github.com/openclaw/skills/blob/main/skills/snail3d/tubeclaw/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/snail3d/tubeclaw/SKILL.md",
+      "source_ids": [
+        "aipmandy-cn"
+      ]
+    },
+    {
+      "uid": "openclaw/skills:skills/esokullu/tubeify/SKILL.md",
+      "name": "tubeify",
+      "description": "",
+      "slug": "tubeify",
+      "repo": "openclaw/skills",
+      "branch": "main",
+      "path": "skills/esokullu/tubeify/SKILL.md",
+      "html_url": "https://github.com/openclaw/skills/blob/main/skills/esokullu/tubeify/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/openclaw/skills/main/skills/esokullu/tubeify/SKILL.md",
       "source_ids": [
         "aipmandy-cn"
       ]
