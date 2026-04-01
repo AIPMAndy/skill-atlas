@@ -11,6 +11,13 @@ from pathlib import Path
 from typing import List
 
 
+def positive_int(value: str) -> int:
+    parsed = int(value)
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("must be a positive integer")
+    return parsed
+
+
 def script_root() -> Path:
     return Path(__file__).resolve().parent.parent
 
@@ -66,16 +73,27 @@ def parse_args() -> argparse.Namespace:
         default=0,
         help="Minimum unique skills required by fetch (0 disables guard)",
     )
-    parser.add_argument("--top", type=int, default=15, help="Top repositories to print in stats")
-    parser.add_argument("--min-risk-score", type=int, default=2, help="Minimum risk score for audit output")
+    parser.add_argument("--top", type=positive_int, default=15, help="Top repositories to print in stats")
+    parser.add_argument("--min-risk-score", type=positive_int, default=2, help="Minimum risk score for audit output")
     parser.add_argument("--include-clean", action="store_true", help="Include clean records in audit outputs")
     parser.add_argument("--deep-audit", action="store_true", help="Fetch raw SKILL.md content during audit")
-    parser.add_argument("--audit-max-skills", type=int, default=500, help="Max skills for deep audit")
+    parser.add_argument("--audit-max-skills", type=positive_int, default=500, help="Max skills for deep audit")
     parser.add_argument("--bootstrap-dry-run", action="store_true", help="Dry-run git clone/pull in offline mode")
     parser.add_argument("--no-update", action="store_true", help="Skip git pull for existing repos in offline mode")
     parser.add_argument("--python", default="python3", help="Python executable")
     parser.add_argument("--dry-run", action="store_true", help="Print commands only")
     return parser.parse_args()
+
+
+def planned_outputs(mode: str) -> List[str]:
+    outputs = ["skills.json", "skills.csv", "latest.md"]
+    if mode in {"secure-refresh", "full"}:
+        outputs.extend(["skills.audit.json", "skills-audit.md"])
+    if mode in {"full", "offline"}:
+        outputs.extend(["collections.json", "collections.md"])
+    if mode == "offline":
+        outputs.append("collections.bootstrap.json")
+    return outputs
 
 
 def main() -> None:
@@ -235,6 +253,7 @@ def main() -> None:
     print(f"[out_dir] {output_dir}")
     print(f"[skills_input] {skills_input}")
     print(f"[local_root] {local_root}")
+    print(f"[outputs] {', '.join(planned_outputs(args.mode))}")
 
     for cmd in steps:
         run_command(cmd, dry_run=args.dry_run)
