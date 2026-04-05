@@ -54,6 +54,14 @@ def test_refresh_dry_run_prints_expected_steps(tmp_path: Path) -> None:
     assert "--min-total 1" in text
     assert "print_stats.py" in text
     assert "--top 7" in text
+    assert "[outputs] skills.json, skills.csv, latest.md" in text
+
+
+def test_rejects_non_positive_top_value() -> None:
+    result = run_workflow("--mode", "refresh", "--top", "0", "--dry-run")
+    text = full_output(result)
+    assert result.returncode != 0
+    assert "must be a positive integer" in text
 
 
 def test_offline_requires_existing_skills_snapshot(tmp_path: Path) -> None:
